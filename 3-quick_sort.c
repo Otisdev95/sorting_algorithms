@@ -72,7 +72,7 @@ void lomuto_sort(int *array, size_t size, int f, int s)
 
 	if (f < s)
 	{
-		pivot = partition(array, size, f, s);
+		pivot = lomuto_partition(array, size, f, s);
 		lomuto_sort(array, size, f, pivot - 1);
 		lomuto_sort(array, size, pivot + 1, s);
 	}

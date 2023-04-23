@@ -66,7 +66,7 @@ int lomuto_partition(int *array, size_t size, int f, int s)
  * Return: void
  */
 
-int lomuto_sort(int *array, size_t size, int f, int s)
+void lomuto_sort(int *array, size_t size, int f, int s)
 {
 	int pivot;
 

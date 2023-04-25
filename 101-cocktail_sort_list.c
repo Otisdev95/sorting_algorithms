@@ -13,10 +13,8 @@
 void swap(listint_t *a, listint_t *b, listint_t **list)
 {
 	a->next = b->next;
-
 	if (b->next != NULL)
 		b->next->prev = a;
-
 	/* With a being the first node we'd make b first node */
 	if (a->prev == NULL)
 	{
@@ -51,13 +49,10 @@ void cocktail_sort_list(listint_t **list)
 
 	if (list == NULL || (*list) == NULL || (*list)->next == NULL)
 		return;
-
 	x = (*list);
-
-	while (swapped != NULL)
+	while (swapped)
 	{
 		swapped = 0;
-
 		/* Searching the elements on the list and swapping */
 		while (x->next != NULL)
 		{
@@ -73,10 +68,8 @@ void cocktail_sort_list(listint_t **list)
 		}
 		if (swapped == 0)
 			break;
-
 		/* Here, x is 2nd to last, so we search backwards and swap */
 		x = x->prev;
-
 		while (x->prev)
 		{
 			y = x->prev;

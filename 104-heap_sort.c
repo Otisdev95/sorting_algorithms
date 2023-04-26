@@ -13,7 +13,7 @@
 
 void swap_root_nodes(int *array, size_t root, size_t size, size_t right)
 {
-	size_t left, mid, temp;
+	size_t left = 0, mid = 0, temp = 0;
 	int aux = 0;
 
 	while ((left = (2 * root + 1)) <= right)
